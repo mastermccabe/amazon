@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>checkout</title>
+</head>
+
+<body>
+  <div id="wrapper"> {% csrf_token %}
+    <h2> Thank you for your business</h2><br>
+    <p> We charged your credit card for ${{request.session.cost}}</p>
+    <span> note - should be / 100 but not enough time </span>
+
+    <br>
+    <p>We have ordered {{request.session.count}} items so far and spent ${{request.session.total}} with Amadon.com!</p>
+
+
+
+  </div>
+  <a href="/amadon">Go Back</a>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js ">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js">
+  </script>
+  <meta charset="utf-8">
+  <title>amadon</title>
+</head>
+
+<body>
+  <div id="wrapper" class="container-fluid  align-top">
+    <div id="header_box" class="container-fluid border">
+      <h2> Amadon Store </h2>
+
+      <!-- <p> Random Word (attempt #{{request.session.counter}} ) </p> -->
+    </div>
+    <table class="table table-hover container-fluid borde">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>T Shirt</td>
+          <td>$12.99</td>
+          <td>
+            <form action='process' method='post'>
+              {% csrf_token %}
+              <select name='quantity'>
+                 <option value =1 >1</option>
+                 <option value =2 >2</option>
+                 <option value =3 >3</option>
+              </select>
+              <input type='hidden' name='product_id' value='1299' />
+              <input type='submit' class="btn-primary" value='Buy!' />
+            </form>
+          </td>
+
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Sweatshirt</td>
+          <td>$29.99</td>
+          <td>
+            <form action='process' method='post'>
+              {% csrf_token %}
+              <select name='quantity'>
+                 <option value =1 >1</option>
+                 <option value =2 >2</option>
+                 <option value =3 >3</option>
+              </select>
+              <input type='hidden' name='product_id' value='2999' />
+              <input type='submit' class="btn-primary" value='Buy!' />
+            </form>
+          </td>
+
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <!-- <td colspan="2">Larry the Bird</td> -->
+          <td>Algo Book</td>
+          <td>$49.99</td>
+          <td>
+            <form action='process' method='post'>
+              {% csrf_token %}
+              <select name='quantity'>
+                 <option value =1 >1</option>
+                 <option value =2 >2</option>
+                 <option value =3 >3</option>
+              </select>
+              <input type='hidden' name='product_id' value='4999' />
+              <input type='submit' class="btn-primary" value='Buy!' />
+            </form>
+          </td>
+
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Cup</td>
+          <td>$4.99</td>
+          <td>
+            <form action='process' method='post'>
+              {% csrf_token %}
+              <select name='quantity'>
+                 <option value =1 >1</option>
+                 <option value =2 >2</option>
+                 <option value =3 >3</option>
+              </select>
+              <input type='hidden' name='product_id' value='499' />
+              <input type='submit' class="btn-primary" value='Buy!' />
+            </form>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+
+</html>
